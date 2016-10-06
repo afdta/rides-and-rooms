@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=PT+Serif:400,400i,700,700i&subset=cyrillic,cyrillic-ext,latin-ext" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="app.css">
+
+</head>
+
+<body style="background-color:#fafafa;color:#101010;font-family:PT Serif, times, serif;margin:0px">
+
+<script src="js/on-scroll.js"> </script>
+
+<div id="d1" style="height:400px;width:300px;border:1px solid red;margin:10px;"></div>
+
+<div id="d2" style="height:400px;width:300px;border:1px solid red;margin:10px;"></div>
+
+<div id="d3" style="height:400px;width:300px;border:1px solid red;margin:10px;"></div>
+
+<div id="d4" style="height:400px;width:300px;border:1px solid red;margin:10px;"></div>
+
+<div id="d5" style="height:400px;width:300px;border:1px solid red;margin:10px;"></div>
+
+<div id="d6" style="height:400px;width:300px;border:1px solid red;margin:10px;"></div>
+
+<div id="d7" style="height:400px;width:300px;border:1px solid red;margin:10px;"></div>
+
+<script>
+	var callback = function(i){
+		return function(){
+			console.log("Element "+i);
+		}
+	} 
+
+	var sc = new ScrollCollection();
+	var i=0;
+	while(i < 7){
+		++i;
+		var e = document.getElementById("d"+i);
+		e.innerHTML = "E"+i;
+		sc.register(e, callback(i));
+	}
+
+</script>
+
+</body>
+
+
+
+</html>
