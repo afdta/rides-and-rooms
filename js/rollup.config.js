@@ -1,5 +1,5 @@
 export default {
-  entry: 'main.js',
-  format: 'cjs',
+  entry: 'index.js',
+  format: 'iife',
   dest: 'app.js'
 };

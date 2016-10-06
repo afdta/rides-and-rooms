@@ -12,7 +12,13 @@
 
 <body style="background-color:#fafafa;color:#101010;font-family:PT Serif, times, serif;margin:0px">
 
+<!--
 <script src="js/on-scroll.js"> </script>
+<script src="js/main.js"> </script>
+
+
+<script src="js/d3/d3.min.js"> </script>-->
+<script src="app.js"> </script>
 
 <div id="d1" style="height:400px;width:300px;border:1px solid red;margin:10px;"></div>
 
@@ -27,24 +33,6 @@
 <div id="d6" style="height:400px;width:300px;border:1px solid red;margin:10px;"></div>
 
 <div id="d7" style="height:400px;width:300px;border:1px solid red;margin:10px;"></div>
-
-<script>
-	var callback = function(i){
-		return function(){
-			console.log("Element "+i);
-		}
-	} 
-
-	var sc = new ScrollCollection();
-	var i=0;
-	while(i < 7){
-		++i;
-		var e = document.getElementById("d"+i);
-		e.innerHTML = "E"+i;
-		sc.register(e, callback(i));
-	}
-
-</script>
 
 </body>
 

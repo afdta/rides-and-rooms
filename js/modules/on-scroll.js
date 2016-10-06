@@ -1,5 +1,3 @@
-'use strict';
-
 //on-scroll: register arbitrary scroll events
 
 //scroll collection constructor
@@ -87,7 +85,6 @@ ScrollCollection.prototype.activate_all = function(){
 	for(var id in this.listeners){
 		if(this.listeners.hasOwnProperty(id)){ this.activate(id); }
 	}	
-}
+}	
 
-//gig economy interactive - oct 2016
-var sc = new ScrollCollection();
+export { ScrollCollection };
